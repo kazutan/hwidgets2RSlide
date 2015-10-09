@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+author: "kazutan"
+date: "2015年10月9日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## a
+
+```{r grVis_test}
+library(DiagrammeR)
+DiagrammeR::grViz("
+                  digraph rmarkdown {
+                  A -> B
+                  }
+                  ", height = 200)
+```
+
+
+## b
+
+```{r mermaid_test}
+DiagrammeR::mermaid("
+                    graph LR
+                    A --> B
+                    ", height = 200)
+```
+
